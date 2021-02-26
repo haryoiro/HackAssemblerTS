@@ -27,7 +27,7 @@ export type ICommand = Array<{
 
 const re = {
   isComments: /(\/\/.*$)|\s+/gim,
-  findDest: /([AMD|]{1,4}|null)(?=\=)/g,
+  findDest: /([AMD]{1,4}|null)(?=\=)/g,
   findComp: /(?<=\=)[AMD+01\-\|&!]{1,3}/g,
   findJump: /(?<=;)[(J)[GELNMQTP]{3}|(null)]$/g,
 }

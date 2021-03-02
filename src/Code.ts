@@ -4,14 +4,14 @@ class Code {
   constructor() {}
   dest(mnemonic: string): number[] {
     let d = [
-      ((mnemonic.includes("A")) ? 1 : 0),
-      ((mnemonic.includes("D")) ? 1 : 0),
-      ((mnemonic.includes("M")) ? 1 : 0),
+      (+(mnemonic.includes("A")),
+      (+(mnemonic.includes("D")),
+      (+(mnemonic.includes("M")),
     ]
     return mnemonic === "null" ? [0,0,0] : d
   }
   comp(mnemonic: string): number[] {
-    const a = mnemonic.includes("M") ? 1 : 0
+    const a = +(mnemonic.includes("M"))
     const m = mnemonic.replace("M", "A")
     switch(m) {
       case"0"   :  return  [a,1,0,1,0,1,0]

@@ -1,7 +1,6 @@
 import { Jump_Mnemonic } from './Parser';
 
 class Code {
-  constructor() {}
   dest(mnemonic: string): number[] {
     let d = [
       (+(mnemonic.includes("A")),

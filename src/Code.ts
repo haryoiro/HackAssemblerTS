@@ -3,9 +3,9 @@ import { Jump_Mnemonic } from './Parser';
 class Code {
   dest(mnemonic: string): number[] {
     let d = [
-      (+(mnemonic.includes("A")),
-      (+(mnemonic.includes("D")),
-      (+(mnemonic.includes("M")),
+      (+mnemonic.includes("A")),
+      (+mnemonic.includes("D")),
+      (+mnemonic.includes("M")),
     ]
     return mnemonic === "null" ? [0,0,0] : d
   }

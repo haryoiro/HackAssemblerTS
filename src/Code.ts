@@ -2,15 +2,16 @@ import { Jump_Mnemonic } from './Parser';
 
 class Code {
   dest(mnemonic: string): number[] {
-    let d = [
-      (+mnemonic.includes("A")),
-      (+mnemonic.includes("D")),
-      (+mnemonic.includes("M")),
+    const result = [
+      mnemonic.includes("A") || 0,
+      mnemonic.includes("D") || 0,
+      mnemonic.includes("M") || 0,
     ]
-    return mnemonic === "null" ? [0,0,0] : d
+    return mnemonic === "null" ? [0,0,0] : result
   }
+
   comp(mnemonic: string): number[] {
-    const a = +mnemonic.includes("M")
+    const a = mnemonic.includes("M") || 0
     const m = mnemonic.replace("M", "A")
     switch(m) {
       case "0"   :  return [a,1,0,1,0,1,0]
